@@ -7,18 +7,22 @@ import { LoginComponent } from './login/login.component';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { environment } from 'src/environments/environment.prod';
+import { MenuComponent } from './menu/menu.component';
+import { MenubarModule } from 'primeng-lts/menubar';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    MenubarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
